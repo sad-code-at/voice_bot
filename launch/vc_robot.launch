@@ -1,0 +1,6 @@
+ <launch>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch"/>
+    <include file="$(find ros_vosk)/launch/ros_vosk.launch"/>
+    <node pkg="vc_robot" type="speaker_node.py" name="speaker_node" output="screen"/>
+    <node pkg="vc_robot" type="control.py" name="control" output="screen" />    
+</launch>
